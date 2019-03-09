@@ -1,15 +1,18 @@
 
 message("CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH}")
 
-find_path(foo_INCLUDE_DIRS fun.h  include)
 
-find_library(foo_LIBS fun PATHS lib)
-message("foo1 include ${foo_INCLUDE_DIRS} libs ${foo_LIBS} ")
+#PATH_SUFFIXES 相对路径 PATHS绝对路径
+find_path(fun_INCLUDE_DIRS fun.h PATH_SUFFIXES fun)
+#find_path(fun_INCLUDE_DIRS fun.h PATHS ${CMAKE_PREFIX_PATH}/include/fun)
 
-if(foo_INCLUDE_DIRS)
-message("foo2 include ${foo_INCLUDE_DIRS} libs ${foo_LIBS} ")
-set(foo_FOUND true)
+find_library(fun_LIBS fun )
+message("fun1 include ${fun_INCLUDE_DIRS} libs ${fun_LIBS} ")
+
+if(fun_INCLUDE_DIRS AND fun_LIBS)
+message("fun2 include ${fun_INCLUDE_DIRS} libs ${fun_LIBS} ")
+set(fun_FOUND true)
 else()
-set(foo_FOUND false)
+set(fun_FOUND false)
 
 endif()

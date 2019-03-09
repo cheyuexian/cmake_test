@@ -10,7 +10,7 @@ set(lib_src fun.cpp)
 add_library(fun  ${lib_src})
 
 install(TARGETS fun DESTINATION  lib )
-install(FILES fun.h DESTINATION  include )
+install(FILES fun.h DESTINATION  include/fun )
 
 
 # SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME "hello") 
