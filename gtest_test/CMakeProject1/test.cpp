@@ -18,3 +18,14 @@ TEST(testCase, test2)
     EXPECT_EQ(11, testlib(4, 11));//EXPECT_EQ是比较两个值是否相等
 }
 
+
+TEST(testCase1, test1)
+{
+    EXPECT_EQ(11, testlib(4, 11));//EXPECT_EQ是比较两个值是否相等
+}
+
+TEST(testCase1, test2)
+{
+    EXPECT_EQ(11, testlib(4, 11));//EXPECT_EQ是比较两个值是否相等
+}
+
