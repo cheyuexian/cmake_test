@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.9)
 message("---${src}")
 set(lib_src fun.cpp)
 
-
+message("Util--${MAIN}")
 #include_directories(util/)
 
 add_library(fun  ${lib_src})
